@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Neucha&family=Permanent+Marker&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+  --color-text:#fbf7f5d2;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  background:url(./greenboard.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  font-family: 'Annie Use Your Telescope', cursive;
+  color:var(--color-text);
+  font-size:2rem;
+}
+
+  
+
+  
+ 
+  
+  h1 {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 6rem;
+    font-weight: bolder;
+  }
+  
+  
+
+
+
+
+
+
+
+#tablero{
+  height: 300px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.casillero{
+  border-bottom: 5px solid var(--color-text);
+  border-right: 5px solid var(--color-text);
+  font-size: 50px;
+  text-align: center;
+  line-height: 95px;
+  cursor: pointer;
+  user-select: none;
+  color: #f7b32c;
+  
+}
+.casillero:nth-child(3n){
+  border-right: none;
+}
+.casillero:nth-child(n+7){
+  border-bottom: none;
+}
+
+.casillero.highlight{
+  background-color: #f7b32c;
+}
